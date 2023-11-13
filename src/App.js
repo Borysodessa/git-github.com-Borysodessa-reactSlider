@@ -28,11 +28,9 @@ export function App() {
           transitionProperty: "transform",
         }}
       >
-        <MortageInfo key={checked.id} checked={mortageNameButtons[0]} />
-        <MortageInfo key={checked.id + 1} checked={mortageNameButtons[1]} />
-        <MortageInfo key={checked.id + 2} checked={mortageNameButtons[2]} />
-        <MortageInfo key={checked.id + 3} checked={mortageNameButtons[3]} />
-        <MortageInfo key={checked.id + 4} checked={mortageNameButtons[4]} />
+        {mortageNameButtons.map((mortageNameButton) => (
+          <MortageInfo checked={mortageNameButtons[mortageNameButton.id - 1]} />
+        ))}
       </div>
     </section>
   );
