@@ -4,14 +4,14 @@ import { useState } from "react";
 import { mortageNameButtons } from "./components/base";
 import { SliderButtons } from "./components/sliderButtons";
 import { MortageInfo } from "./components/mortgage_information";
-import cl from "classnames";
 
 export function App() {
   const [checked, setChecked] = useState(mortageNameButtons[0]);
-  const trans = (checked.id - 1) * -141 + "%";
-  console.log(`translate(${trans} , 0)`);
+  const checkedIndex = mortageNameButtons.indexOf(checked);
+  const trans = (-checkedIndex * 100) / mortageNameButtons.length + "%";
+  const widthLength = mortageNameButtons.length * 100 + "%";
   return (
-    <section className="mainSection">
+    <section className="mainSection" style={{ overflow: "hidden" }}>
       <div className="sliderButtons">
         <SliderButtons
           mortageNameButtons={mortageNameButtons}
@@ -20,16 +20,17 @@ export function App() {
         />
       </div>
       <div
-        key={checked}
         className="mortgageTermsWrap"
         style={{
+          overflow: "hidden",
+          width: widthLength,
           transform: `translate(${trans}, 0)`,
           transitionDuration: "1000ms",
           transitionProperty: "transform",
         }}
       >
         {mortageNameButtons.map((mortageNameButton) => (
-          <MortageInfo checked={mortageNameButtons[mortageNameButton.id - 1]} />
+          <MortageInfo checked={mortageNameButton} />
         ))}
       </div>
     </section>

@@ -82,7 +82,7 @@ color: #031D40;
 .mortgageTermsWrap{
   display: flex;
   justify-content: left;
-  gap: 1000px;
+  
   margin-left: 0;
 }
 
