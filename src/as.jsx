@@ -9,7 +9,7 @@ import cl from "classnames";
 export function App() {
   const [checked, setChecked] = useState(mortageNameButtons[2]);
   const trans = -(checked.id - 1) * 141 + "%";
-  console.log(trans);
+
   return (
     <section className="mainSection">
       <div className="sliderButtons">

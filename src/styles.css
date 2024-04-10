@@ -82,8 +82,7 @@ color: #031D40;
 .mortgageTermsWrap{
   display: flex;
   justify-content: left;
-  
-  margin-left: 0;
+    margin-left: 0;
 }
 
 .arrow{
@@ -91,6 +90,7 @@ color: #031D40;
   height: 16px;
 }
   
+
 
 
 
