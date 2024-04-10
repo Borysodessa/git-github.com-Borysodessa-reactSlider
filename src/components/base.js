@@ -7,7 +7,7 @@ import eastFarEastern from "./images/eastFarEastern.png";
 export const mortageNameButtons = [
   {
     id: "1",
-    nameOfMortgage: "Льготная",
+    nameOfMortgage: "Льготн",
     rateValue: "9%",
     mortageTitle: "Льготная ипотека",
     backgroundImage: preferential,
